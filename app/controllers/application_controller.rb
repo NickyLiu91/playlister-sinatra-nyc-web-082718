@@ -3,7 +3,10 @@ class ApplicationController < Sinatra::Base
   set :session_secret, "my_application_secret"
   set :views, Proc.new { File.join(root, "../views/") }
 
+  # use SongsController
+
   get '/' do
-    erb :index
+    # erb :index
+    "Hi"
   end
 end
