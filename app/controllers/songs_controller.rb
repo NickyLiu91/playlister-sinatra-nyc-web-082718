@@ -8,6 +8,8 @@ class SongsController < ApplicationController
     @song = Song.find do |song|
       song.slug == params['name']
     end
+    @artist = @song.artist
+    @genres = @song.genres
     erb :'songs/show'
   end
 end
